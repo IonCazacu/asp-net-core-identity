@@ -1,6 +1,7 @@
 using AutoMapper;
 using IdentityUserRegistration.DTO;
 using IdentityUserRegistration.Entities;
+using IdentityUserRegistration.JwtFeatures;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +13,13 @@ public class AccountsController : ControllerBase
 {
     private readonly UserManager<User> _userManager;
     private readonly IMapper _mapper;
+    private readonly JwtHandler _jwtHandler;
 
-    public AccountsController(UserManager<User> userManager, IMapper mapper)
+    public AccountsController(UserManager<User> userManager, IMapper mapper, JwtHandler jwtHandler)
     {
         _userManager = userManager;
         _mapper = mapper;
+        _jwtHandler = jwtHandler;
     }
 
     [HttpPost("sign-up")]
@@ -37,5 +40,19 @@ public class AccountsController : ControllerBase
         }
 
         return StatusCode(201);
+    }
+
+    [HttpPost("sign-in")]
+    public async Task<IActionResult> SignIn([FromBody] UserForAuthenticationDto userForAuthentication)
+    {
+        var user = await _userManager.FindByNameAsync(userForAuthentication.Email!);
+        if (user is null || !await _userManager.CheckPasswordAsync(user, userForAuthentication.Password!))
+        {
+            return Unauthorized(new AuthResponseDto { ErrorMessage = "Invalid Authentication" });
+        }
+
+        var token = _jwtHandler.CreateToken(user);
+
+        return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token });
     }
 }
