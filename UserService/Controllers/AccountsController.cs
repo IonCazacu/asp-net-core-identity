@@ -1,11 +1,11 @@
 using AutoMapper;
-using IdentityUserRegistration.DTO;
-using IdentityUserRegistration.Entities;
-using IdentityUserRegistration.JwtFeatures;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using UserService.DTO;
+using UserService.Entities;
+using UserService.JwtFeatures;
 
-namespace IdentityUserRegistration.Controllers;
+namespace UserService.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

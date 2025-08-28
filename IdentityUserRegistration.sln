@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityUserRegistration", "IdentityUserRegistration.csproj", "{0D6CC537-850F-4243-93A6-DC4CBB112827}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{36991C95-EA8B-4E29-98D4-3FD9F016B914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "NotificationService\NotificationService.csproj", "{78A77E55-692C-4B09-A8E7-2C266040E503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D6CC537-850F-4243-93A6-DC4CBB112827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D6CC537-850F-4243-93A6-DC4CBB112827}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D6CC537-850F-4243-93A6-DC4CBB112827}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D6CC537-850F-4243-93A6-DC4CBB112827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36991C95-EA8B-4E29-98D4-3FD9F016B914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36991C95-EA8B-4E29-98D4-3FD9F016B914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36991C95-EA8B-4E29-98D4-3FD9F016B914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36991C95-EA8B-4E29-98D4-3FD9F016B914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A77E55-692C-4B09-A8E7-2C266040E503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A77E55-692C-4B09-A8E7-2C266040E503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A77E55-692C-4B09-A8E7-2C266040E503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A77E55-692C-4B09-A8E7-2C266040E503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

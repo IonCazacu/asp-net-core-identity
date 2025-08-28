@@ -1,10 +1,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using IdentityUserRegistration.Entities;
 using Microsoft.IdentityModel.Tokens;
+using UserService.Entities;
 
-namespace IdentityUserRegistration.JwtFeatures;
+namespace UserService.JwtFeatures;
 
 public class JwtHandler
 {

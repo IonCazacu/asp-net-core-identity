@@ -1,4 +1,4 @@
-namespace IdentityUserRegistration.DTO;
+namespace UserService.DTO;
 
 public class AuthResponseDto
 {
