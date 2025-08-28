@@ -1,8 +1,8 @@
 using AutoMapper;
-using IdentityUserRegistration.DTO;
-using IdentityUserRegistration.Entities;
+using UserService.DTO;
+using UserService.Entities;
 
-namespace IdentityUserRegistration;
+namespace UserService;
 
 public class MappingProfile : Profile
 {

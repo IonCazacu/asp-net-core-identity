@@ -1,8 +1,8 @@
-using IdentityUserRegistration.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using UserService.Entities;
 
-namespace IdentityUserRegistration;
+namespace UserService;
 
 public class DatabaseContext : IdentityDbContext<User>
 {

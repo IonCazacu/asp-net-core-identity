@@ -1,11 +1,11 @@
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using IdentityUserRegistration;
-using IdentityUserRegistration.Entities;
-using IdentityUserRegistration.JwtFeatures;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using UserService;
+using UserService.Entities;
+using UserService.JwtFeatures;
 
 var builder = WebApplication.CreateBuilder(args);
 
